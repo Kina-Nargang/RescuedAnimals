@@ -19,6 +19,7 @@ namespace AnimalCatalogAPI.Domain
         public string PictureUrl { get; set; }
         public int CatalogTypeId { get; set; }
         public int CatalogBreedId { get; set; }
+        // build relationship here
         public virtual CatalogType CatalogType { get; set; }
         public virtual CatalogBreed CatalogBreed { get; set; }
     }
