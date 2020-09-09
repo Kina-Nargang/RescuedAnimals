@@ -18,5 +18,7 @@ namespace AnimalCatalogAPI.Data
         public DbSet<CatalogBreed> CatalogBreeds { get; set; }
         public DbSet<CatalogType> Catalogtypes { get; set; }
         public DbSet<CatalogItem> CatalogItems { get; set; }
+
+
     }
 }
