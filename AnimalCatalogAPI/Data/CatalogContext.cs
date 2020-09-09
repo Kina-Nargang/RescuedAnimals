@@ -75,6 +75,12 @@ namespace AnimalCatalogAPI.Data
                 e.Property(i => i.SpayedOrNeutered)
                     .IsRequired()
                     .HasMaxLength(5);
+                e.HasOne(i => i.CatalogType)
+                    .WithMany()
+                    .HasForeignKey(i => i.CatalogTypeId);
+                e.HasOne(i => i.CatalogBreed)
+                    .WithMany()
+                    .HasForeignKey(i => i.CatalogBreedId);
             });
         }
     }
