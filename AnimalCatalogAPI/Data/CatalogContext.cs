@@ -30,7 +30,7 @@ namespace AnimalCatalogAPI.Data
                 e.Property(b => b.Id)
                     .IsRequired()
                     .UseHiLo("catalog_breed_hilo");
-                e.Property(b => b.Name)
+                e.Property(b => b.Breed)
                     .IsRequired()
                     .HasMaxLength(100);
             });
@@ -41,7 +41,7 @@ namespace AnimalCatalogAPI.Data
                 e.Property(t => t.Id)
                     .IsRequired()
                     .UseHiLo("catalog_type_hilo");
-                e.Property(t => t.Name)
+                e.Property(t => t.Type)
                     .IsRequired()
                     .HasMaxLength(100);
             });
@@ -66,7 +66,8 @@ namespace AnimalCatalogAPI.Data
                 e.Property(i => i.Gender)
                     .IsRequired()
                     .HasMaxLength(10);
-                e.Property(i => i.PictureUrl);
+                e.Property(i => i.PictureUrl)
+                    .HasMaxLength(1000);
                 e.Property(i => i.Price)
                     .IsRequired();
                 e.Property(i => i.Size)
