@@ -16,7 +16,7 @@ namespace AnimalCatalogAPI.Data
         { }
 
         public DbSet<CatalogBreed> CatalogBreeds { get; set; }
-        public DbSet<CatalogType> Catalogtypes { get; set; }
+        public DbSet<CatalogType> CatalogTypes { get; set; }
         public DbSet<CatalogItem> CatalogItems { get; set; }
 
         // override the baseclass's method to create your own tables
